@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://productpaparazzi.co.uk
+
+# Sitemaps
+Sitemap: https://productpaparazzi.co.uk/sitemap.xml 

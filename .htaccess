@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^productpaparazzi.co.uk [NC]
+    RewriteRule (.*)$ http://www.aljaami.co.uk/$1/ [L,R=301]
+    RewriteRule ^([^/]+)/$ $1.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^/]+)/$ $1.html
+    RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+    RewriteRule ^([^/]+)/([^/]+)/([^/]+)/$ /$1/$2/$3.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+    
+</IfModule>
